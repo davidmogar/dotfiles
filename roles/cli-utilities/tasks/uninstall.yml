@@ -5,5 +5,4 @@
     name: apt-meta
   vars:
     apt_meta_state: absent
-    apt_meta_packages:
-      - "{{ cli_utilities_packages }}"
+    apt_meta_packages: "{{ cli_utilities_packages }}"
