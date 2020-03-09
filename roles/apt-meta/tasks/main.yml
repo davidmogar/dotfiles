@@ -7,9 +7,7 @@
     cache_valid_time: 3600
     force_apt_get: yes
     install_recommends: yes
-    name: "{{ packages }}"
+    name: "{{ apt_meta_packages }}"
     state: "{{ apt_meta_state }}"
     update_cache: yes
   become: yes
-  vars:
-    packages: "{{ apt_meta_packages }}"
