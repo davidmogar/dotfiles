@@ -20,3 +20,9 @@ jobs:
           apt install sudo
       - name: Run bootstrap script
         run: CI_WORKSPACE=$GITHUB_WORKSPACE sh $GITHUB_WORKSPACE/bootstrap.sh
+  uninstall:
+    container: ubuntu:rolling
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - name: Run bootstrap script for uninstall profile
+        run: CI_WORKSPACE=$GITHUB_WORKSPACE PROFILE=uninstall sh $GITHUB_WORKSPACE/bootstrap.sh
