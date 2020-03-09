@@ -55,11 +55,11 @@ Note that both, limit and tags, are optional arguments.
   <tbody>
     <tr>
       <td><a href="roles/apt-meta">apt-meta</a></td>
-      <td>Manages APT packages</td>
+      <td>Manages APT packages.</td>
     </tr>
     <tr>
       <td><a href="roles/apt-repo-meta">apt-repo-meta</a></td>
-      <td>Manages APT repositories</td>
+      <td>Manages APT repositories.</td>
     </tr>
   </tbody>
 </table>
