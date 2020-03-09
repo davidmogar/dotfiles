@@ -28,3 +28,12 @@ apt_repo_meta_repositories:
     repo: deb http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-security {{ repositories }}
   - file: ubuntu-security
     repo: deb-src http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-security {{ repositories }}
+
+#
+# Select roles to install
+#
+# 'install': Install the role
+# 'remove':  Uninstall the role
+# Any other value will ignore the role (neither install nor uninstall)
+
+cli_utilities: 'install'

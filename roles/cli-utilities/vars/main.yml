@@ -1,0 +1,12 @@
+---
+
+cli_utilities_packages:
+  - htop
+  - jq
+  - lastpass-cli
+  - ncdu
+  - nmap
+  - ranger
+  - tig
+  - unzip
+  - yank

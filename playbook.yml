@@ -19,3 +19,7 @@
   roles:
     - apt-meta
   tags: bootstrap
+
+- hosts: all
+  roles: [ cli-utilities ]
+  tags: cli-utilities
