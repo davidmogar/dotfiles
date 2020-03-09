@@ -1,0 +1,30 @@
+---
+
+user: "{{ ansible_user_id }}"
+user_home: "{{ ansible_user_dir }}"
+
+#
+# Custom variables
+#
+release: "{{ ansible_distribution_release }}"
+repositories: main restricted universe multiverse
+
+#
+# Ubuntu apt repositories
+#
+apt_repo_meta_repositories:
+  # main
+  - file: ubuntu-main
+    repo: deb http://fr.archive.ubuntu.com/ubuntu/ {{ release }} {{ repositories }}
+  - file: ubuntu-main
+    repo: deb-src http://fr.archive.ubuntu.com/ubuntu/ {{ release }} {{ repositories }}
+  # updates
+  - file: ubuntu-updates
+    repo: deb http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-updates {{ repositories }}
+  - file: ubuntu-updates
+    repo: deb-src http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-updates {{ repositories }}
+  # security
+  - file: ubuntu-security
+    repo: deb http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-security {{ repositories }}
+  - file: ubuntu-security
+    repo: deb-src http://fr.archive.ubuntu.com/ubuntu/ {{ release }}-security {{ repositories }}

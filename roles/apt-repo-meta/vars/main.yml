@@ -1,0 +1,4 @@
+---
+
+apt_repo_meta_packages:
+  - apt-transport-https

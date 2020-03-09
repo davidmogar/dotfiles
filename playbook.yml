@@ -1,0 +1,21 @@
+---
+
+#
+# Bootstrap system
+#
+- hosts: all
+  roles:
+    - apt-repo-meta
+  tags: bootstrap
+
+- hosts: all
+  vars:
+    apt_meta_packages:
+      - apt-utils
+      - ca-certificates
+      - curl
+      - gnupg
+      - software-properties-common
+  roles:
+    - apt-meta
+  tags: bootstrap

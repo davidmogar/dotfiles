@@ -1,0 +1,19 @@
+---
+
+# Array of repositories to add by default
+apt_repo_meta_repositories:
+  - file: ubuntu-main
+    repo: deb http://archive.ubuntu.com/ubuntu/ {{ release }} main
+  - file: ubuntu-updates
+    repo: deb http://archive.ubuntu.com/ubuntu/ {{ release }}-updates main
+  - file: ubuntu-security
+    repo: deb http://archive.ubuntu.com/ubuntu/ {{ release }}-security main
+
+apt_repo_meta_state: present
+
+# Array of apt keys to add (all are optional)
+apt_repo_meta_keys: []
+# - url:
+#   keyserver:
+#   id:
+#   file:

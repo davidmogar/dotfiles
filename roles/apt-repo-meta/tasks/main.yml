@@ -1,0 +1,56 @@
+---
+
+- name: ensure required packages are installed
+  apt:
+    install_recommends: no
+    name: "{{ apt_repo_meta_packages }}"
+    state: latest
+    update_cache: yes
+  become: yes
+  delay: 10
+  register: task_result
+  retries: 30
+  until: task_result is succeeded
+
+- name: ensure default sources.list is removed
+  become: yes
+  file:
+    state: absent
+    path: /etc/apt/sources.list
+  notify: update apt repository cache
+
+- name: ensure apt keys are managed
+  apt_key:
+    file: "{{ item.file | default(omit) }}"
+    id: "{{ item.id | default(omit) }}"
+    keyserver: "{{ item.keyserver | default(omit) }}"
+    state: "{{ apt_repo_meta_state }}"
+    url: "{{ item.url | default(omit) }}"
+    validate_certs: yes
+  become: yes
+  delay: 10
+  notify: update apt repository cache
+  register: task_result
+  retries: 30
+  until: task_result is succeeded
+  with_items:
+    - "{{ apt_repo_meta_keys }}"
+
+- name: ensure apt repositories are managed
+  apt_repository:
+    filename: "{{ item.file }}"
+    repo: "{{ item.repo }}"
+    state: "{{ apt_repo_meta_state }}"
+    update_cache: yes
+    validate_certs: yes
+  become: yes
+  delay: 10
+  notify: update apt repository cache
+  register: task_result
+  retries: 30
+  until: task_result is succeeded
+  with_items:
+    - "{{ apt_repo_meta_repositories }}"
+
+# Make sure the handler runs now and not at the end of the playbook
+- meta: flush_handlers
