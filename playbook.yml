@@ -20,6 +20,13 @@
     - apt-meta
   tags: bootstrap
 
+#
+# Install roles
+#
+- hosts: all
+  roles: [ cheat.sh ]
+  tags: cheat.sh
+
 - hosts: all
   roles: [ cli-utilities ]
   tags: cli-utilities

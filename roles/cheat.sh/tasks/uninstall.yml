@@ -1,0 +1,15 @@
+---
+
+- name: Remove /usr/local/bin/cht.sh
+  become: yes
+  file:
+    path: /usr/local/bin/cht.sh
+    state: absent
+
+- name: ensure requirements are removed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_state: absent
+    apt_meta_packages:
+      - "{{ cheat_sh_packages }}"

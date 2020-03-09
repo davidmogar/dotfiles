@@ -62,6 +62,10 @@ Note that both, limit and tags, are optional arguments.
       <td>Manages APT repositories.</td>
     </tr>
     <tr>
+      <td><a href="roles/cli-utilities">cheat.sh</a></td>
+      <td>Installs <a href="https://github.com/chubin/cheat.sh">cheat.sh</a> shell command.</td>
+    </tr>
+    <tr>
       <td><a href="roles/cli-utilities">cli-utilities</a></td>
       <td>Installs a curated <a href="roles/cli-utilities/vars/main.yml">list</a> of cli utilities.</td>
     </tr>

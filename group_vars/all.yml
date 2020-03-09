@@ -36,4 +36,5 @@ apt_repo_meta_repositories:
 # 'remove':  Uninstall the role
 # Any other value will ignore the role (neither install nor uninstall)
 
+cheat_sh: 'install'
 cli_utilities: 'install'
