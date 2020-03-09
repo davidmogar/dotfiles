@@ -61,6 +61,10 @@ Note that both, limit and tags, are optional arguments.
       <td><a href="roles/apt-repo-meta">apt-repo-meta</a></td>
       <td>Manages APT repositories.</td>
     </tr>
+    <tr>
+      <td><a href="roles/template">template</a></td>
+      <td>Dummy role to use as a template for any new role. It contains the bare minimum to install/uninstall dependencies and the switches to call the different tasks.</td>
+    </tr>
   </tbody>
 </table>
 

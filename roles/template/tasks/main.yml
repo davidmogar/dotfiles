@@ -1,0 +1,7 @@
+---
+
+- include_tasks: install.yml
+  when: role_name == 'install'
+
+- include_tasks: uninstall.yml
+  when: role_name == 'remove'

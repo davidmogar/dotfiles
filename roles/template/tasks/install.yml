@@ -1,0 +1,7 @@
+---
+
+- name: ensure requirements are installed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ role_name_packages }}"

@@ -1,0 +1,9 @@
+---
+
+- name: ensure requirements are removed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_state: absent
+    apt_meta_packages:
+      - "{{ role_name_packages }}"
