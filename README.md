@@ -75,7 +75,7 @@ Note that both, limit and tags, are optional arguments.
     </tr>
     <tr>
       <td><a href="roles/fzf">fzf</a></td>
-      <td>Installs <a href="https://github.com/junegunn/fzf">fzf.</a></td>
+      <td>Installs <a href="https://github.com/junegunn/fzf">fzf</a>.</td>
     </tr>
     <tr>
       <td><a href="roles/template">template</a></td>
@@ -83,7 +83,7 @@ Note that both, limit and tags, are optional arguments.
     </tr>
     <tr>
       <td><a href="roles/terraform">terraform</a></td>
-      <td>Installs <a href="https://www.terraform.io/">Terraform.</a></td>
+      <td>Installs <a href="https://www.terraform.io/">Terraform</a>.</td>
     </tr>
   </tbody>
 </table>
