@@ -63,7 +63,7 @@ Note that both, limit and tags, are optional arguments.
     </tr>
     <tr>
       <td><a href="roles/cli-utilities">cli-utilities</a></td>
-      <td>Installs a curated <a href="roles/cl-utilities/vars/main.yml">list</a> of cli utilities.</td>
+      <td>Installs a curated <a href="roles/cli-utilities/vars/main.yml">list</a> of cli utilities.</td>
     </tr>
     <tr>
       <td><a href="roles/template">template</a></td>
