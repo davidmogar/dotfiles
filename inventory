@@ -1,0 +1,5 @@
+[home]
+home ansible_connection=local
+
+[work]
+home ansible_connection=local
