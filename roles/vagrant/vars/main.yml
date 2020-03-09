@@ -1,0 +1,6 @@
+---
+
+vagrant_path: /usr/local/bin
+
+vagrant_packages:
+  - unzip

@@ -12,6 +12,7 @@ cli_utilities: 'install'
 docker: 'install'
 fzf: 'install'
 terraform: 'install'
+vagrant: 'install'
 
 #
 # Role-specific settings

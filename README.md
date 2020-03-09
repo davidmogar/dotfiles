@@ -85,6 +85,10 @@ Note that both, limit and tags, are optional arguments.
       <td><a href="roles/terraform">terraform</a></td>
       <td>Installs <a href="https://www.terraform.io/">Terraform</a>.</td>
     </tr>
+    <tr>
+      <td><a href="roles/vagrant">vagrant</a></td>
+      <td>Installs <a href="https://www.vagrantup.com/">Vagrant</a>.</td>
+    </tr>
   </tbody>
 </table>
 

@@ -42,3 +42,7 @@
 - hosts: all
   roles: [ terraform ]
   tags: terraform
+
+- hosts: all
+  roles: [ vagrant ]
+  tags: vagrant

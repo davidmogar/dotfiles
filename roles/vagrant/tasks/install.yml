@@ -1,0 +1,34 @@
+---
+
+- name: ensure requirements are installed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ vagrant_packages }}"
+
+- name: fetch vagrant info
+  uri:
+    url: https://www.vagrantup.com/downloads.html
+    method: GET
+    follow_redirects: "yes"
+    return_content: yes
+  register: vagrant_info_raw
+  check_mode: no
+  until: vagrant_info_raw is succeeded
+  retries: 30
+  delay: 10
+
+- name: set vagrant download url
+  set_fact:
+    vagrant_zip: "{{ vagrant_info_raw.content | regex_search(package_regex) }}"
+  vars:
+    package_regex: 'https://releases.*linux_amd64\.zip'
+  check_mode: no
+
+- name: ensure vagrant is downloaded
+  unarchive:
+    src: "{{ vagrant_zip }}"
+    dest: "{{ vagrant_path }}"
+    remote_src: yes
+    mode: 0755
+  become: yes

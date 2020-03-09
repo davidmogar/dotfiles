@@ -1,0 +1,7 @@
+---
+
+- name: ensure vagrant is removed
+  file:
+    path: "{{ vagrant_path }}/vagrant"
+    state: absent
+  become: yes

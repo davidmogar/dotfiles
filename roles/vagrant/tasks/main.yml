@@ -1,0 +1,7 @@
+---
+
+- include_tasks: install.yml
+  when: vagrant == 'install'
+
+- include_tasks: uninstall.yml
+  when: vagrant == 'remove'
