@@ -71,7 +71,7 @@ Note that both, limit and tags, are optional arguments.
     </tr>
     <tr>
       <td><a href="roles/docker">docker</a></td>
-      <td>Installs <a href="https://www.docker.com/">Docker</a> and ensure the user is added to the docker group</td>
+      <td>Installs <a href="https://www.docker.com/">Docker</a> and ensure the user is added to the docker group.</td>
     </tr>
     <tr>
       <td><a href="roles/fzf">fzf</a></td>
@@ -80,6 +80,10 @@ Note that both, limit and tags, are optional arguments.
     <tr>
       <td><a href="roles/template">template</a></td>
       <td>Dummy role to use as a template for any new role. It contains the bare minimum to install/uninstall dependencies and the switches to call the different tasks.</td>
+    </tr>
+    <tr>
+      <td><a href="roles/terraform">terraform</a></td>
+      <td>Installs <a href="https://www.terraform.io/">Terraform.</a></td>
     </tr>
   </tbody>
 </table>

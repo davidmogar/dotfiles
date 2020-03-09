@@ -38,3 +38,7 @@
 - hosts: all
   roles: [ fzf ]
   tags: fzf
+
+- hosts: all
+  roles: [ terraform ]
+  tags: terraform
