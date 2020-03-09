@@ -30,3 +30,7 @@
 - hosts: all
   roles: [ cli-utilities ]
   tags: cli-utilities
+
+- hosts: all
+  roles: [ fzf ]
+  tags: fzf

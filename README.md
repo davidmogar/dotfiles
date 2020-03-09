@@ -70,6 +70,10 @@ Note that both, limit and tags, are optional arguments.
       <td>Installs a curated <a href="roles/cli-utilities/vars/main.yml">list</a> of cli utilities.</td>
     </tr>
     <tr>
+      <td><a href="roles/fzf">fzf</a></td>
+      <td>Installs <a href="https://github.com/junegunn/fzf">fzf.</a></td>
+    </tr>
+    <tr>
       <td><a href="roles/template">template</a></td>
       <td>Dummy role to use as a template for any new role. It contains the bare minimum to install/uninstall dependencies and the switches to call the different tasks.</td>
     </tr>

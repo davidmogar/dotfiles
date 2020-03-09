@@ -9,3 +9,10 @@
 #
 cheat_sh: 'install'
 cli_utilities: 'install'
+fzf: 'install'
+
+#
+# Role-specific settings
+#
+# Enable/disable fuzzy completion (bash & zsh)?
+fzf_completion: yes
