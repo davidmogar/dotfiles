@@ -32,5 +32,9 @@
   tags: cli-utilities
 
 - hosts: all
+  roles: [ docker ]
+  tags: docker
+
+- hosts: all
   roles: [ fzf ]
   tags: fzf

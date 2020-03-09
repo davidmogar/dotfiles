@@ -9,4 +9,5 @@
 #
 cheat_sh: 'remove'
 cli_utilities: 'remove'
+docker: 'remove'
 fzf: 'remove'

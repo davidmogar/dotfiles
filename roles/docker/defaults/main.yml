@@ -1,0 +1,7 @@
+---
+
+# 'install', 'remove' or 'ignore'
+docker: 'ignore'
+
+# 'stable', 'edge' or both
+docker_repo_channel: stable
