@@ -20,10 +20,7 @@ jobs:
           apt install sudo
       - name: Run bootstrap script
         run: CI_WORKSPACE=$GITHUB_WORKSPACE sh $GITHUB_WORKSPACE/bootstrap.sh
-  uninstall:
-    container: ubuntu:latest
-    needs: bootstrap
-    runs-on: [ ubuntu-latest ]
-    steps:
-      - name: Run bootstrap script for uninstall profile
-        run: CI_WORKSPACE=$GITHUB_WORKSPACE PROFILE=uninstall sh $GITHUB_WORKSPACE/bootstrap.sh
+      - name: Run ansible-playbook for the uninstall profile
+        run: |
+          cd $GITHUB_WORKSPACE
+          ansible-playbook -i inventory playbook.yml --diff --limit uninstall --ask-become-pass
