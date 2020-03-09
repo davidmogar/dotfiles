@@ -19,21 +19,21 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/davidmogar/dotfiles/master/b
 
 ### Applying a specific profile and/or tag
 
-A specific profile can be applied by setting the `PROFILE` variable before the bootstraping commands. The definition of these profiles can be found in the `host_vars` directory. The following example shows how to use this variable:
+A specific profile can be applied by setting the `PROFILE` variable before the bootstraping commands. The definition of these profiles can be found in the `host_vars` directory. If no profile is specified, the [generic profile](host_vars/generic.yml) will be applied. The following example shows how to use this variable:
 
 ```sh
-PROFILE=profile sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidmogar/dotfiles/master/bootstrap.sh)"
+PROFILE=zoidberg sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidmogar/dotfiles/master/bootstrap.sh)"
 ```
 
 It is also possible to run only specifc parts by using the `--tags` options. For example, the following command will only run the bootstrap tasks, which will prepare the repositories and install some required packages:
 
 ```sh
-PROFILE=profile TAGS=bootstrap sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidmogar/dotfiles/master/bootstrap.sh)"
+PROFILE=zoidberg TAGS=bootstrap sh -c "$(curl -fsSL https://raw.githubusercontent.com/davidmogar/dotfiles/master/bootstrap.sh)"
 ```
 
 ### Running the playbook manually
 
-Once the system has been bootstrapped, a copy of the repository will be placed in `${HOME}/.ansible/dotfiles`. To run manually from that repository, execute the following commands:
+Once the system has been bootstrapped, a copy of the git repository will be placed in `${HOME}/.ansible/dotfiles`. To apply the playbook manually from that repository, execute the following commands:
 
 ```sh
 cd ~/.ansible/dotfiles

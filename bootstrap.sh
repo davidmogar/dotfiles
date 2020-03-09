@@ -8,7 +8,7 @@ set -o nounset
 CI_WORKSPACE=${CI_WORKSPACE:-}
 # Use the CI workspace if defined to use the code trat triggered the CI workflow
 LOCAL_PATH=${CI_WORKSPACE:-${HOME}/.ansible/dotfiles}
-PROFILE=${PROFILE:-all}
+PROFILE=${PROFILE:-generic}
 REPOSITORY="https://github.com/davidmogar/dotfiles.git"
 TAGS=${TAGS:-all}
 

@@ -1,5 +1,8 @@
+[all]
+generic ansible_connection=local
+
 [home]
-home ansible_connection=local
+zoidberg ansible_connection=local
 
 [work]
-home ansible_connection=local
+farnsworth ansible_connection=local
