@@ -1,0 +1,11 @@
+---
+
+#
+# Select roles to install
+#
+# 'install': Install the role
+# 'remove':  Uninstall the role
+# Any other value will ignore the role (neither install nor uninstall)
+#
+cheat_sh: 'remove'
+cli_utilities: 'remove'
