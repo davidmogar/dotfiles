@@ -1,12 +1,24 @@
 ---
 
 cli_utilities_packages:
+  - build-essential
+  - bzip2
+  - colortest
+  - curl
+  - gawk
+  - gcc
+  - gzip
   - htop
+  - iotop
   - jq
   - lastpass-cli
+  - make
   - ncdu
   - nmap
   - ranger
+  - rar
+  - sshfs
   - tig
   - unzip
+  - wget
   - yank
