@@ -1,0 +1,22 @@
+name: Ubuntu LTS
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  bootstrap:
+    container: ubuntu:latest
+    runs-on: [ ubuntu-latest ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install sudo
+        run: |
+          apt update
+          apt install sudo
+      - name: Run bootstrap script
+        run: CI_WORKSPACE=$GITHUB_WORKSPACE sh $GITHUB_WORKSPACE/bootstrap.sh
