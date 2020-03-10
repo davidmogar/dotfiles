@@ -7,7 +7,6 @@ cli_utilities_packages:
   - curl
   - gawk
   - gcc
-  - gzip
   - htop
   - iotop
   - jq
