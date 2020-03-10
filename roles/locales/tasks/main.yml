@@ -10,7 +10,7 @@
   locale_gen:
     name: "{{ item }}"
     state: present
-  loop: "{{ locales + locales_default | unique }}"
+  loop: "{{ (locales + [ locales_default ]) | unique }}"
 
 - name: set default locale
   template:
