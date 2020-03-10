@@ -1,0 +1,6 @@
+---
+
+locales_packages:
+  - locales
+
+locales_path: "/etc/defaults/locale"

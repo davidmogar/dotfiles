@@ -1,0 +1,7 @@
+---
+
+locales:
+  - en_US.UTF-8
+  - es_ES.UTF-8
+
+locales_default: en_US.UTF-8

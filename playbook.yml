@@ -20,6 +20,11 @@
     - apt-meta
   tags: bootstrap
 
+- hosts: all
+  roles:
+    - locales
+  tags: bootstrap
+
 #
 # Install roles
 #

@@ -1,0 +1,21 @@
+---
+
+- name: ensure requirements are installed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ locales_packages }}"
+
+- name: generate locales
+  locale_gen:
+    name: {{ item }}
+    state: present
+  loop: {{ locales + locales_default | unique }}
+
+- name: set default locale
+  template:
+    src: locale.j2
+    dest: "{{ locales_path }}"
+    owner: root
+    group: root
+    mode: 0644
