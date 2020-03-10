@@ -12,10 +12,16 @@
     state: present
   loop: "{{ (locales + [ locales_default ]) | unique }}"
 
+- name: ensure locales path exists
+  file:
+    mode: 0755
+    path: "{{ locales_path | dirname }}"
+    state: directory
+
 - name: set default locale
   template:
-    src: locale.j2
     dest: "{{ locales_path }}"
-    owner: root
     group: root
     mode: 0644
+    owner: root
+    src: locale.j2
