@@ -8,7 +8,7 @@
 
 - name: generate locales
   locale_gen:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
   loop: "{{ locales + locales_default | unique }}"
 
