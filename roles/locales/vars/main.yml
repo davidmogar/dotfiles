@@ -3,4 +3,4 @@
 locales_packages:
   - locales
 
-locales_path: "/etc/defaults/locale"
+locales_path: "/etc/default/locale"
