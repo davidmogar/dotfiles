@@ -2,7 +2,7 @@
 
 spotify_apt_key:
   id: A87FF9DF48BF1C90
-  keyserver: keyserver=keyserver.ubuntu.com
+  keyserver: hkp://keyserver.ubuntu.com
 
 spotify_apt_repo:
   file: spotify
