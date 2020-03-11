@@ -15,8 +15,8 @@
 - name: ensure default sources.list is removed
   become: yes
   file:
-    state: absent
     path: /etc/apt/sources.list
+    state: absent
   notify: update apt repository cache
 
 - name: ensure apt keys are managed

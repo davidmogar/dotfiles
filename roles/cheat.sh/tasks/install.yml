@@ -9,6 +9,6 @@
 - name: Download cht.sh
   become: yes
   get_url:
-    url: https://cht.sh/:cht.sh
     dest: /usr/local/bin/cht.sh
     mode: '0755'
+    url: https://cht.sh/:cht.sh

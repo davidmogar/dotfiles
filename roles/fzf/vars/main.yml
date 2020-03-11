@@ -1,7 +1,7 @@
 ---
 
-fzf_path: "{{ user_home }}/.fzf"
-
 fzf_packages:
   - git
   - wget
+
+fzf_path: "{{ user_home }}/.fzf"

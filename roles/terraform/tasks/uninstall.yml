@@ -1,7 +1,7 @@
 ---
 
 - name: ensure terraform is removed
+  become: yes
   file:
     path: "{{ terraform_path }}/terraform"
     state: absent
-  become: yes

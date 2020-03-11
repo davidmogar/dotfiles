@@ -1,6 +1,6 @@
 ---
 
-terraform_path: /usr/local/bin
-
 terraform_packages:
   - unzip
+
+terraform_path: /usr/local/bin
