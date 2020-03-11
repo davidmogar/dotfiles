@@ -1,0 +1,16 @@
+---
+
+- name: ensure spotify repo is present
+  include_role:
+    name: apt-repo-meta
+  vars:
+    apt_repo_meta_keys:
+      - "{{ spotify_apt_key }}"
+    apt_repo_meta_repositories:
+      - "{{ spotify_apt_repo }}"
+
+- name: ensure spotify is installed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ [ spotify_package_name ] }}"

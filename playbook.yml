@@ -45,6 +45,10 @@
   tags: fzf
 
 - hosts: all
+  roles: [ spotify ]
+  tags: spotify
+
+- hosts: all
   roles: [ terraform ]
   tags: terraform
 

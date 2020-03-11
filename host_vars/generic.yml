@@ -11,6 +11,7 @@ cheat_sh: 'install'
 cli_utilities: 'install'
 docker: 'install'
 fzf: 'install'
+spotify: 'install'
 terraform: 'install'
 vagrant: 'install'
 

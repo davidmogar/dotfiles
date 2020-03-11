@@ -82,6 +82,10 @@ Note that both, limit and tags, are optional arguments.
       <td>Sets locales.</td>
     </tr>
     <tr>
+      <td><a href="roles/spotify">spotify</a></td>
+      <td>Installs <a href="https://www.spotify.com/">Spotify from the official repository</a>.</td>
+    </tr>
+    <tr>
       <td><a href="roles/template">template</a></td>
       <td>Dummy role to use as a template for any new role. It contains the bare minimum to install/uninstall dependencies and the switches to call the different tasks.</td>
     </tr>
