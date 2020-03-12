@@ -4,5 +4,5 @@
   include_role:
     name: apt-meta
   vars:
-    apt_meta_packages: "{{ [neovim_package_name] + neovim_exclusive_packages }}"
+    apt_meta_packages: "{{ neovim_packages }}"
     apt_meta_state: absent
