@@ -29,7 +29,7 @@
   set_fact:
     gh_deb: "{{ gh_info_raw.content | regex_search(package_regex) }}"
   vars:
-    package_regex: 'gh_*linux_amd64\.deb'
+    package_regex: '\/cli\/cli\/releases.*linux_amd64\.deb'
 
 - name: ensure gh deb is downloaded
   delay: 10
