@@ -15,6 +15,7 @@ neovim: 'install'
 spotify: 'install'
 terraform: 'install'
 vagrant: 'install'
+vscode: 'install'
 
 #
 # Role-specific settings

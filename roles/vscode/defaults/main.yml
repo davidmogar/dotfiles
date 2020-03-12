@@ -1,0 +1,7 @@
+---
+
+# 'install', 'remove' or 'ignore'
+vscode: 'ignore'
+
+# 'stable', 'edge' or both
+vscode_repo_channel: stable

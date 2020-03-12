@@ -1,0 +1,12 @@
+---
+
+# ID: curl https://download.vscode.com/linux/ubuntu/gpg | gpg --list-packets
+vscode_apt_key:
+  id: EB3E94ADBE1229CF
+  url: https://packages.microsoft.com/keys/microsoft.asc
+
+vscode_apt_repo:
+  file: vscode
+  repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+vscode_package_name: code

@@ -59,3 +59,7 @@
 - hosts: all
   roles: [ vagrant ]
   tags: vagrant
+
+- hosts: all
+  roles: [ vscode ]
+  tags: vscode

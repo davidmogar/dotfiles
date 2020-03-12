@@ -1,0 +1,18 @@
+---
+
+- name: ensure vscode is removed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ [vscode_package_name] }}"
+    apt_meta_state: absent
+
+- name: ensure vscode repo is removed
+  include_role:
+    name: apt-repo-meta
+  vars:
+    apt_repo_meta_keys:
+      - "{{ vscode_apt_key }}"
+    apt_repo_meta_repositories:
+      - "{{ vscode_apt_repo }}"
+    apt_repo_meta_state: absent

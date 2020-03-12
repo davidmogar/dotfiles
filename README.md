@@ -101,6 +101,10 @@ Note that both, limit and tags, are optional arguments.
       <td><a href="roles/vagrant">vagrant</a></td>
       <td>Installs <a href="https://www.vagrantup.com/">Vagrant</a>.</td>
     </tr>
+    <tr>
+      <td><a href="roles/vscode">vscode</a></td>
+      <td>Installs <a href="https://code.visualstudio.com/">VS Code</a>.</td>
+    </tr>
   </tbody>
 </table>
 
