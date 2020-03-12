@@ -1,0 +1,6 @@
+---
+
+- name: install gh
+  apt:
+    deb: "{{ gh_deb_path }}"
+  become: yes

@@ -78,6 +78,10 @@ Note that both, limit and tags, are optional arguments.
       <td>Installs <a href="https://github.com/junegunn/fzf">fzf</a>.</td>
     </tr>
     <tr>
+      <td><a href="roles/gh">gh</a></td>
+      <td>Installs <a href="https://github.com/cli/cli">GitHub CLI tool</a>.</td>
+    </tr>
+    <tr>
       <td><a href="roles/locales">locales</a></td>
       <td>Sets locales.</td>
     </tr>

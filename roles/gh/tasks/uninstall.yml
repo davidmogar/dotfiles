@@ -1,0 +1,13 @@
+---
+
+- name: ensure requirements are removed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ gh_packages + [ gh_package_name ] }}"
+    apt_meta_state: absent
+
+- name: ensure gh deb directory is removed
+  file:
+    path: "{{ gh_deb_path }}"
+    state: absent

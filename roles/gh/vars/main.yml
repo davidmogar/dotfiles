@@ -1,0 +1,7 @@
+---
+
+gh_deb_path: "{{ user_home }}/.cache/gh/latest.deb"
+
+gh_package_name: "gh"
+
+gh_packages: []

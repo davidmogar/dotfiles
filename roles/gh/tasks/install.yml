@@ -1,0 +1,45 @@
+---
+
+- name: ensure requirements are installed
+  include_role:
+    name: apt-meta
+  vars:
+    apt_meta_packages: "{{ gh_packages }}"
+
+- name: ensure gh deb path exists
+  file:
+    mode: 0755
+    path: "{{ gh_deb_path | dirname }}"
+    state: directory
+
+- name: fetch gh info
+  uri:
+    follow_redirects: "yes"
+    method: GET
+    return_content: yes
+    url: https://github.com/cli/cli/releases/latest
+  check_mode: no
+  delay: 10
+  register: gh_info_raw
+  retries: 30
+  until: gh_info_raw is succeeded
+
+- name: set gh download url
+  check_mode: no
+  set_fact:
+    gh_deb: "{{ gh_info_raw.content | regex_search(package_regex) }}"
+  vars:
+    package_regex: 'gh_*linux_amd64\.deb'
+
+- name: ensure gh deb is downloaded
+  delay: 10
+  get_url:
+    dest: "{{ gh_deb_path }}"
+    force: yes
+    mode: 0644
+    timeout: 30
+    url: "https://github.com{{ gh_deb }}"
+  notify: install gh
+  register: task_result
+  retries: 30
+  until: task_result is succeeded

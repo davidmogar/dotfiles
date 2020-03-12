@@ -45,6 +45,10 @@
   tags: fzf
 
 - hosts: all
+  roles: [ gh ]
+  tags: gh
+
+- hosts: all
   roles: [ neovim ]
   tags: neovim
 
