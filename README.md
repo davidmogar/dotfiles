@@ -82,6 +82,10 @@ Note that both, limit and tags, are optional arguments.
       <td>Sets locales.</td>
     </tr>
     <tr>
+      <td><a href="roles/neovim">neovim</a></td>
+      <td>Installs <a href="https://github.com/neovim/neovim">neovim</a>.</td>
+    </tr>
+    <tr>
       <td><a href="roles/spotify">spotify</a></td>
       <td>Installs <a href="https://www.spotify.com/">Spotify from the official repository</a>.</td>
     </tr>

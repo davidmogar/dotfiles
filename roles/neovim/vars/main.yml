@@ -1,0 +1,16 @@
+---
+
+neovim_exclusive_packages:
+  - lua-nvim
+
+neovim_package_name: neovim
+
+neovim_python2_packages:
+  - python-neovim
+
+neovim_python3_packages:
+  - python3-neovim
+
+# Required packages: https://neovim.io/doc/user/provider.html
+neovim_shared_packages:
+  - xsel
