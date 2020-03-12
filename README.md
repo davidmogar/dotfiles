@@ -87,7 +87,7 @@ Note that both, limit and tags, are optional arguments.
     </tr>
     <tr>
       <td><a href="roles/spotify">spotify</a></td>
-      <td>Installs <a href="https://www.spotify.com/">Spotify from the official repository</a>.</td>
+      <td>Installs <a href="https://www.spotify.com/">Spotify</a> from the official repository.</td>
     </tr>
     <tr>
       <td><a href="roles/template">template</a></td>
